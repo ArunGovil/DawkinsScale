@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+:root {
+  --primary: #f0f6fc;
+  --secondary: #0d1117;
+  --third: #010409;
+  --border: #767676;
+  --blue: #1f6feb;
+  --yellow: #fdcb58;
+  --slide: #3b3b3b;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  background-color: var(--third);
+  color: var(--primary);
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.scale {
+  -webkit-appearance: none;
+  width: 70%;
+  height: 16px;
+  outline: none;
+  opacity: 0.8;
+  border-radius: 12px;
+  background-color: var(--slide);
+}
+
+.scale:hover {
+  opacity: 1;
+}
+
+.scale::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  background: var(--yellow);
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.scale::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  background: var(--yellow);
+  cursor: pointer;
+}
+
+label {
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 12px;
+  margin-left: 5px;
+  opacity: 0.75;
+}
+
+.card {
+  background-color: var(--secondary);
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--border);
+  line-height: 1.5rem;
+  max-width: 450px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#summary {
+  opacity: 0.75;
+}
+
+.share {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 6px;
+}
+
+.twitter-share {
+  padding: 6px;
+  background-color: var(--bloo);
+  cursor: pointer;
+  border-radius: 8px;
+  border-width: 1px;
+  border-color: white;
+  border-style: solid;
+  margin-right: 8px;
+}
+
+.link-share {
+  padding: 6px;
+  background-color: var(--secondary);
+  cursor: pointer;
+  border-radius: 8px;
+  border-width: 1px;
+  border-color: var(--border);
+  border-style: solid;
+}
+
+.footer {
+  margin-top: 20px;
+  font-size: 0.8rem;
+  color: var(--border);
+}
+
+a {
+  text-decoration: none;
+  color: var(--border);
+}
+
+a:hover {
+  color: var(--yellow);
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/favicon.svg">
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <title>Dawkins Scale</title>
+  </head>
+  <body>
+    <div class="container">
+      <section class="box">
+        <h1>Dawkins Scale</h1>
+        <form class="form">
+          <input
+            class="scale"
+            id="slider"
+            type="range"
+            min="1"
+            max="7"
+            value="1"
+          />
+          <label id="count">0</label>
+        </form>
+        <div class="card">
+          <h3 id="output">Welcome to dawkins scale</h3>
+          <p id="summary">
+            The Dawkins Scale is a seven-point scale proposed by Richard Dawkins
+            in the God Delusion, which denotes a spectrum of probabilities
+            between two extremes of opposite certainty, in which Dawkins
+            suggests definitive statements to summarize one's place along the
+            spectrum of theistic probability.
+          </p>
+        </div>
+        <!-- <div class="share">
+          <div class="twitter-share">Tweet</div>
+          <div class="link-share">Share</div>
+        </div> -->
+      </section>
+      <footer class="footer">
+        <a target="_blank" href="https://github.com/ArunGovil">ⓒ Arun Govil</a>
+      </footer>
+    </div>
+    <script>
+      const slider = document.getElementById("slider");
+      const output = document.getElementById("output");
+      const summary = document.getElementById("summary");
+      const count = document.getElementById("count");
+      const scale = slider.value;
+
+      const data = [
+        {
+          id: 1,
+          title: "Strong theist",
+          summary:
+            "100% probability of God. In the words of Carl Jung: I do not believe, I know.",
+        },
+        {
+          id: 2,
+          title: "De facto theist",
+          summary:
+            "Very high probability but short of 100%. I don't know for certain, but I strongly believe in God and live my life on the assumption that he is there.",
+        },
+        {
+          id: 3,
+          title: "Leaning towards theism",
+          summary:
+            "Higher than 50% but not very high. I am very uncertain, but I am inclined to believe in God.",
+        },
+        {
+          id: 4,
+          title: "Completely impartial",
+          summary:
+            "Exactly 50%. God's existence and non-existence are exactly equiprobable.",
+        },
+        {
+          id: 5,
+          title: "Leaning towards atheism",
+          summary:
+            "Lower than 50% but not very low. I do not know whether God exists but I'm inclined to be skeptical.",
+        },
+        {
+          id: 6,
+          title: "De facto atheist",
+          summary:
+            "Very low probability, but short of zero. I don't know for certain but I think God is very improbable, and I live my life on the assumption that he is not there.",
+        },
+        {
+          id: 7,
+          title: "Strong atheist",
+          summary:
+            "I know there is no God, with the same conviction as Jung knows there is one.",
+        },
+      ];
+
+      slider.oninput = () => {
+        const scale = slider.value;
+        data.map((item) => {
+          if (item.id == scale) {
+            output.innerHTML = item.title;
+            summary.innerHTML = item.summary;
+            count.innerHTML = item.id;
+          }
+        });
+      };
+    </script>
+  </body>
+</html>
