@@ -112,15 +112,15 @@ label {
   color: var(--border);
 }
 
-#god {
-  color: var(--yellow);
-}
-
 a {
   text-decoration: none;
   color: var(--border);
 }
 
 a:hover {
+  color: var(--yellow);
+}
+
+#god {
   color: var(--yellow);
 }
